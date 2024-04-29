@@ -9,7 +9,8 @@ pipeline {
             steps {
                 echo 'Hello World'
                 bat 'java --version'
-
+                bat 'pwd'
+                bat 'dir'
             }
         }
     }
