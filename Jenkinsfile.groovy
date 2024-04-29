@@ -8,7 +8,7 @@ pipeline {
         stage('Example') {
             steps {
                 echo 'Hello World'
-                java '--version'
+                bat 'java --version'
 
             }
         }
