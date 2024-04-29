@@ -4,7 +4,9 @@ pipeline {
         stage('review') {
             steps {
                 echo 'Hello world'
+                pwd
             }
         }
+
     }
 }
