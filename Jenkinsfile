@@ -1,10 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage('review') {
+        stage('build') {
             steps {
                 echo 'Hello world'
-                sh './gradlew build'
+                ls
+                pwd
             }
         }
 
