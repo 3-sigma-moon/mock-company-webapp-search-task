@@ -4,8 +4,14 @@ pipeline {
         stage('build') {
             steps {
                 echo 'Hello world'
-                ls
-                pwd
+            },
+            steps{
+                sh 'ls'
+            },
+            steps{
+               echo 'pwd'
+            }
+
             }
         }
 
