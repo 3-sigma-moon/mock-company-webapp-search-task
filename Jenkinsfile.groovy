@@ -1,15 +1,18 @@
 pipeline {
     agent any
-    options {
-        // Timeout counter starts AFTER agent is allocated
-        timeout(time: 5, unit: 'SECONDS')
-    }
     stages {
-        stage('Example') {
+        stage('Build') {
             steps {
-                echo 'Hello World'
-                bat 'java --version'
-                bat 'dir'
+                echo 'Building Stage Start'
+                bat './gradlew assemble'
+                echo 'Building Stage End'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing Stage Start'
+                bat './gradlew test'
+                echo 'Testing Stage End'
             }
         }
     }
