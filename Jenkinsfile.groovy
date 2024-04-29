@@ -8,8 +8,8 @@ pipeline {
         stage('Example') {
             steps {
                 echo 'Hello World'
-                sh 'java --version'
-                sh 'ls -alh'
+                java --version
+
             }
         }
     }
