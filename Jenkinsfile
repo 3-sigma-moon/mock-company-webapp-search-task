@@ -4,7 +4,7 @@ pipeline {
         stage('review') {
             steps {
                 echo 'Hello world'
-                sh 'pwd'
+                sh './gradlew build'
             }
         }
 
