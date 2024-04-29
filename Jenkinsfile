@@ -7,7 +7,7 @@ pipeline {
                 echo 'Jenkins Pipelines syntax is near to GitLab 👍'
 
                 script {
-                    ./gradlew assemble
+                    gradlew assemble
                 }
             }
         },
@@ -16,7 +16,7 @@ pipeline {
                 echo 'Testing Stage'
 
                 script {
-                    ./gradlew test
+                    gradlew test
                 }
             }
         }
